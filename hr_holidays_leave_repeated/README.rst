@@ -52,6 +52,10 @@ Usage
 4. Create (save) the leave request. All the periodical leave requests
    are automatically created.
 
+Note for HR Time Off responsibles : creating repeated leaves can only be
+used when selecting Mode = "By Employee" and that all selected employees
+should share the same resource calendar, otherwise an error is raised.
+
 Bug Tracker
 ===========
 
@@ -69,6 +73,7 @@ Authors
 -------
 
 * Onestein
+* Le Filament
 
 Contributors
 ------------
@@ -76,6 +81,8 @@ Contributors
 -  Andrea Stirpe <a.stirpe@onestein.nl>
 -  Hieu, Vo Minh Bao <hieu.vmb@komit-consulting.com>
 -  Italo LOPES <italo.lopes@camptocamp.com>
+-  Rémi - Le Filament
+   <`https://le-filament.com\\> <https://le-filament.com\>>`__
 
 Maintainers
 -----------
