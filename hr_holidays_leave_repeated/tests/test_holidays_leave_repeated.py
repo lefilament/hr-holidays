@@ -97,7 +97,6 @@ class TestHolidaysLeaveRepeated(common.TransactionCase):
         )
 
     def test_01_count_repetitions(self):
-
         leave_1_list = self.env["hr.leave"].search(
             [
                 ("holiday_status_id", "=", self.status_1.id),
@@ -143,7 +142,6 @@ class TestHolidaysLeaveRepeated(common.TransactionCase):
             self.assertEqual(len(leaves), 1)
 
     def test_03_weeks(self):
-
         for i in range(0, 4):
             check_from = self.date_start + timedelta(days=i * 7)
             check_to = self.date_end + timedelta(days=i * 7)
