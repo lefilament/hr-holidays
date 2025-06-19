@@ -2,6 +2,7 @@
 # Copyright 2024- Le Filament (https://le-filament.com)
 # License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
 
+from datetime import timedelta
 from dateutil.relativedelta import relativedelta
 from pytz import timezone, utc
 
@@ -89,7 +90,7 @@ class HrLeave(models.Model):
         from_dt = fields.Datetime.from_string(leave.date_from)
         to_dt = fields.Datetime.from_string(leave.date_to)
 
-        if (to_dt - from_dt).days > param_dict["days"]:
+        if to_dt - from_dt > timedelta(days=param_dict["days"]):
             raise UserError(param_dict["user_error_msg"])
 
         from_dt, to_dt = self._update_repeated_workday_dates(

@@ -198,13 +198,13 @@ class TestHolidaysLeaveRepeated(common.TransactionCase):
 
     def test_07_check_dates(self):
         date_start = datetime(2019, 2, 18, 8, 0, 0, 0)
-        date_end = datetime(2019, 2, 20, 18, 0, 0, 0)
+        date_end = datetime(2019, 2, 25, 18, 0, 0, 0)
         with self.assertRaises(UserError):
             self.env["hr.leave"].create(
                 {
                     "holiday_status_id": self.status_1.id,
                     "holiday_type": "employee",
-                    "repeat_every": "workday",
+                    "repeat_every": "week",
                     "repeat_mode": "times",
                     "repeat_limit": 5,
                     "request_date_from": date_start,
